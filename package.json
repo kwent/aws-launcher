@@ -1,0 +1,33 @@
+{
+  "name": "aws-launcher",
+  "description": "Launch your AWS Services from your macOS dock.",
+  "private": false,
+  "version": "1.0.0",
+  "os": [
+    "darwin"
+  ],
+  "preferGlobal": true,
+  "homepage": "https://github.com/kwent/aws-launcher",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kwent/aws-launcher.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kwent/aws-launcher/issues"
+  },
+  "scripts": {
+    "postinstall": "node compile.js"
+  },
+  "keywords": [
+    "aws",
+    "launcher",
+    "dock",
+    "osx",
+    "macOS"
+  ],
+  "author": "Quentin Rousseau <contact@quent.in>",
+  "license": "MIT",
+  "dependencies": {
+    "fileicon": "^0.1.8"
+  }
+}
