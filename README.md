@@ -14,6 +14,22 @@ Just install the module using npm.
 $ npm install aws-launcher
 ```
 
+Drag and drop the generated folder (located in your `home` directory) in your
+macOS Dock right by the Trash Item.
+
+# Customization
+
+By default, `aws-launcher` generates shortcuts for all AWS services.
+You can customize your launcher folder by deleting files in the `aws-launcher` 
+folder.
+You will need to drag and drop the folder again in your macOS dock to see your 
+updated launcher.
+
+# Spotlight
+
+Since `aws-launcher` is basically just a folder, you can use the macOS spotlight 
+to use your shortcuts as well.
+
 # History
 
 View the [changelog](https://github.com/kwent/aws-launcher/blob/master/CHANGELOG.md)
