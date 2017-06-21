@@ -2,7 +2,7 @@
   "name": "aws-launcher",
   "description": "Launch your AWS Services from your macOS dock.",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "os": [
     "darwin"
   ],
