@@ -4,7 +4,6 @@ const exec = require('child_process').exec;
 const destDir = `${os.homedir()}/aws-launcher`;
 
 urlsFixing = {
-  "EMR": "https://console.aws.amazon.com/elasticmapreduce/home",
   "Lightsail": "https://lightsail.aws.amazon.com/ls/webapp/create/instance",
   "QuickSight": "https://us-east-1.quicksight.aws.amazon.com/sn/console"
 }
@@ -12,6 +11,7 @@ urlsFixing = {
 namespacesFixing = {
   "CertificateManager": "acm",
   "ElasticCache": "elasticache",
+  "EMR": "elasticmapreduce",
   "Shield": "waf",
   "Snowball": "importexport",
   "StepFunctions": "states",
