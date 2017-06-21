@@ -1,9 +1,10 @@
 const os = require('os');
 const fs = require('fs');
 const exec = require('child_process').exec;
-const destDir = `${os.homedir()}/aws-launcher`; 
+const destDir = `${os.homedir()}/aws-launcher`;
 
 urlsFixing = {
+  "EMR": "https://console.aws.amazon.com/elasticmapreduce/home",
   "Lightsail": "https://lightsail.aws.amazon.com/ls/webapp/create/instance",
   "QuickSight": "https://us-east-1.quicksight.aws.amazon.com/sn/console"
 }
@@ -20,7 +21,7 @@ namespacesFixing = {
 
 // Create destination folder
 if (!fs.existsSync(destDir)) {
-  fs.mkdirSync(destDir);  
+  fs.mkdirSync(destDir);
 }
 
 // Create shortcuts
@@ -36,7 +37,7 @@ files.forEach((file, index) => {
     if (!error) {
       exec(`SetFile -a E ${destDir}/${file}.url`, function(error, stdout, stderr) {
         if (!error && index === files.length - 1) {
-          exec(`open ${destDir}`);      
+          exec(`open ${destDir}`);
         }
       });
     }
