@@ -6,6 +6,8 @@ Launch your AWS Services from your macOS dock.
 
 [![AWS Launcher](https://github.com/kwent/aws-launcher/blob/master/doc/aws-launcher.gif?raw=true)](https://github.com/kwent/aws-launcher/)
 
+[![Grid](https://github.com/kwent/aws-launcher/blob/master/doc/grid.jpeg?raw=true)](https://github.com/kwent/aws-launcher/)
+
 # Installation
 
 Just install the module using npm.
