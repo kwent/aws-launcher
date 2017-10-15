@@ -28,6 +28,6 @@
   "author": "Quentin Rousseau <contact@quent.in>",
   "license": "MIT",
   "dependencies": {
-    "fileicon": "^0.1.8"
+    "fileicon": "^0.2.0"
   }
 }
