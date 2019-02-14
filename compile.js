@@ -5,7 +5,8 @@ const destDir = `${os.homedir()}/aws-launcher`;
 
 urlsFixing = {
   "Lightsail": "https://lightsail.aws.amazon.com/ls/webapp/create/instance",
-  "QuickSight": "https://us-east-1.quicksight.aws.amazon.com/sn/console"
+  "QuickSight": "https://us-east-1.quicksight.aws.amazon.com/sn/console",
+  "Connect": "https://us-west-2.console.aws.amazon.com/connect"
 }
 
 namespacesFixing = {
