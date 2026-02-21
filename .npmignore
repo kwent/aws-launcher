@@ -1,3 +1,11 @@
-
-# Do not publish doc folder to the npm registry.
 doc/
+test/
+scripts/
+coverage/
+.github/
+.claude/
+vitest.config.js
+eslint.config.js
+mise.toml
+CLAUDE.md
+PLAN.md

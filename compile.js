@@ -1,45 +1,107 @@
-const os = require('os');
-const fs = require('fs');
-const exec = require('child_process').exec;
-const destDir = `${os.homedir()}/aws-launcher`;
+import { homedir, availableParallelism } from "node:os";
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { execFile } from "node:child_process";
+import { resolve, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+import { promisify } from "node:util";
+import { parseArgs } from "node:util";
 
-urlsFixing = {
-  "Lightsail": "https://lightsail.aws.amazon.com/ls/webapp/create/instance",
-  "QuickSight": "https://us-east-1.quicksight.aws.amazon.com/sn/console"
+const execFileAsync = promisify(execFile);
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const { values: args } = parseArgs({
+  options: {
+    "dry-run": { type: "boolean", default: false },
+    "dest": { type: "string", default: resolve(homedir(), "aws-launcher") },
+  },
+  strict: false,
+});
+
+const DEST_DIR = resolve(args.dest);
+const SERVICES_PATH = resolve(__dirname, "services.json");
+const ICONS_DIR = resolve(__dirname, "icons");
+const FILEICON = resolve(__dirname, "node_modules", ".bin", "fileicon");
+const CONCURRENCY = availableParallelism();
+
+async function createShortcut(destDir, key, service, iconPath) {
+  const url =
+    service.url ||
+    `https://console.aws.amazon.com/${service.namespace}/home`;
+  const filePath = resolve(destDir, `${key}.url`);
+
+  writeFileSync(filePath, `[InternetShortcut]\nURL=${url}`);
+
+  await execFileAsync(FILEICON, ["set", filePath, iconPath]);
+  await execFileAsync("SetFile", ["-a", "E", filePath]);
+
+  return { key, url };
 }
 
-namespacesFixing = {
-  "CertificateManager": "acm",
-  "ElasticCache": "elasticache",
-  "EMR": "elasticmapreduce",
-  "Shield": "waf",
-  "Snowball": "importexport",
-  "StepFunctions": "states",
-  "WorkDocs": "zocalo",
-  "X-Ray": "xray",
+async function runConcurrent(tasks, concurrency) {
+  const results = [];
+  let i = 0;
+
+  async function worker() {
+    while (i < tasks.length) {
+      const index = i++;
+      results[index] = await tasks[index]();
+    }
+  }
+
+  await Promise.all(Array.from({ length: concurrency }, () => worker()));
+  return results;
 }
 
-// Create destination folder
-if (!fs.existsSync(destDir)) {
-  fs.mkdirSync(destDir);
-}
+async function main() {
+  const services = JSON.parse(readFileSync(SERVICES_PATH, "utf8"));
+  const entries = Object.entries(services);
 
-// Create shortcuts
-files = fs.readdirSync('icons');
-files.forEach((file, index) => {
-  file = file.replace(/\.[^/.]+$/, "");
-  console.log(`Compiling ${file}`);
-  const namespace = namespacesFixing[file] || file.toLowerCase();
-  const url = urlsFixing[file] || `https://console.aws.amazon.com/${namespace}/home`;
-  fs.writeFileSync(`${destDir}/${file}.url`, `[InternetShortcut]\nURL=${url}`);
-  exec(`fileicon set ${destDir}/${file}.url icons/${file}.png`, function(error, stdout, stderr) {
-    console.log(error || stdout);
-    if (!error) {
-      exec(`SetFile -a E ${destDir}/${file}.url`, function(error, stdout, stderr) {
-        if (!error && index === files.length - 1) {
-          exec(`open ${destDir}`);
-        }
-      });
+  if (args["dry-run"]) {
+    console.log(`Dry run: would create ${entries.length} shortcuts in ${DEST_DIR}`);
+    for (const [key, service] of entries) {
+      const url =
+        service.url ||
+        `https://console.aws.amazon.com/${service.namespace}/home`;
+      console.log(`  ${key} → ${url}`);
+    }
+    return;
+  }
+
+  if (!existsSync(DEST_DIR)) {
+    mkdirSync(DEST_DIR, { recursive: true });
+  }
+
+  let created = 0;
+  let errors = 0;
+
+  const tasks = entries.map(([key, service]) => async () => {
+    const iconPath = resolve(ICONS_DIR, `${key}.png`);
+    if (!existsSync(iconPath)) {
+      console.error(`Skipping ${key}: icon not found at ${iconPath}`);
+      errors++;
+      return;
+    }
+
+    try {
+      const result = await createShortcut(DEST_DIR, key, service, iconPath);
+      console.log(`Created ${result.key}`);
+      created++;
+    } catch (err) {
+      console.error(`Failed ${key}: ${err.message}`);
+      errors++;
     }
   });
-})
+
+  await runConcurrent(tasks, CONCURRENCY);
+
+  console.log(`\nDone: ${created} shortcuts created, ${errors} errors`);
+
+  if (created > 0) {
+    execFile("open", [DEST_DIR]);
+  }
+}
+
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
