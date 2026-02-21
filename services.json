@@ -1,0 +1,826 @@
+{
+  "Amazon-API-Gateway": {
+    "name": "Amazon API Gateway",
+    "namespace": "apigateway"
+  },
+  "Amazon-AppFlow": {
+    "name": "Amazon AppFlow",
+    "namespace": "appflow"
+  },
+  "Amazon-Application-Recovery-Controller": {
+    "name": "Amazon Application Recovery Controller",
+    "namespace": "route53-recovery-control-config"
+  },
+  "Amazon-AppStream-2": {
+    "name": "Amazon AppStream 2.0",
+    "namespace": "appstream2"
+  },
+  "Amazon-Athena": {
+    "name": "Amazon Athena",
+    "namespace": "athena"
+  },
+  "Amazon-Augmented-AI-A2I": {
+    "name": "Amazon Augmented AI (A2I)",
+    "namespace": "a2i"
+  },
+  "Amazon-Aurora": {
+    "name": "Amazon Aurora",
+    "namespace": "rds"
+  },
+  "Amazon-Bedrock": {
+    "name": "Amazon Bedrock",
+    "namespace": "bedrock"
+  },
+  "Amazon-Braket": {
+    "name": "Amazon Braket",
+    "namespace": "braket"
+  },
+  "Amazon-Chime": {
+    "name": "Amazon Chime",
+    "namespace": "chime"
+  },
+  "Amazon-Cloud-Directory": {
+    "name": "Amazon Cloud Directory",
+    "namespace": "clouddirectory"
+  },
+  "Amazon-CloudFront": {
+    "name": "Amazon CloudFront",
+    "namespace": "cloudfront"
+  },
+  "Amazon-CloudSearch": {
+    "name": "Amazon CloudSearch",
+    "namespace": "cloudsearch"
+  },
+  "Amazon-CloudWatch": {
+    "name": "Amazon CloudWatch",
+    "namespace": "cloudwatch"
+  },
+  "Amazon-CodeCatalyst": {
+    "name": "Amazon CodeCatalyst",
+    "url": "https://codecatalyst.aws/"
+  },
+  "Amazon-CodeGuru": {
+    "name": "Amazon CodeGuru",
+    "namespace": "codeguru"
+  },
+  "Amazon-Cognito": {
+    "name": "Amazon Cognito",
+    "namespace": "cognito"
+  },
+  "Amazon-Comprehend": {
+    "name": "Amazon Comprehend",
+    "namespace": "comprehend"
+  },
+  "Amazon-Comprehend-Medical": {
+    "name": "Amazon Comprehend Medical",
+    "namespace": "comprehendmedical"
+  },
+  "Amazon-Connect": {
+    "name": "Amazon Connect",
+    "namespace": "connect"
+  },
+  "Amazon-Data-Firehose": {
+    "name": "Amazon Data Firehose",
+    "namespace": "firehose"
+  },
+  "Amazon-DataZone": {
+    "name": "Amazon DataZone",
+    "namespace": "datazone"
+  },
+  "Amazon-Detective": {
+    "name": "Amazon Detective",
+    "namespace": "detective"
+  },
+  "Amazon-DevOps-Guru": {
+    "name": "Amazon DevOps Guru",
+    "namespace": "devops-guru"
+  },
+  "Amazon-DocumentDB": {
+    "name": "Amazon DocumentDB",
+    "namespace": "docdb"
+  },
+  "Amazon-DynamoDB": {
+    "name": "Amazon DynamoDB",
+    "namespace": "dynamodb"
+  },
+  "Amazon-EC2": {
+    "name": "Amazon EC2",
+    "namespace": "ec2"
+  },
+  "Amazon-EC2-Image-Builder": {
+    "name": "Amazon EC2 Image Builder",
+    "namespace": "imagebuilder"
+  },
+  "Amazon-EFS": {
+    "name": "Amazon EFS",
+    "namespace": "efs"
+  },
+  "Amazon-Elastic-Container-Registry": {
+    "name": "Amazon Elastic Container Registry",
+    "namespace": "ecr"
+  },
+  "Amazon-Elastic-Container-Service": {
+    "name": "Amazon Elastic Container Service",
+    "namespace": "ecs"
+  },
+  "Amazon-Elastic-Kubernetes-Service": {
+    "name": "Amazon Elastic Kubernetes Service",
+    "namespace": "eks"
+  },
+  "Amazon-ElastiCache": {
+    "name": "Amazon ElastiCache",
+    "namespace": "elasticache"
+  },
+  "Amazon-EMR": {
+    "name": "Amazon EMR",
+    "namespace": "emr"
+  },
+  "Amazon-EventBridge": {
+    "name": "Amazon EventBridge",
+    "namespace": "events"
+  },
+  "Amazon-FinSpace": {
+    "name": "Amazon FinSpace",
+    "namespace": "finspace"
+  },
+  "Amazon-Forecast": {
+    "name": "Amazon Forecast",
+    "namespace": "forecast"
+  },
+  "Amazon-Fraud-Detector": {
+    "name": "Amazon Fraud Detector",
+    "namespace": "frauddetector"
+  },
+  "Amazon-FSx": {
+    "name": "Amazon FSx",
+    "namespace": "fsx"
+  },
+  "Amazon-GameLift-Servers": {
+    "name": "Amazon GameLift",
+    "namespace": "gamelift"
+  },
+  "Amazon-GuardDuty": {
+    "name": "Amazon GuardDuty",
+    "namespace": "guardduty"
+  },
+  "Amazon-Interactive-Video-Service": {
+    "name": "Amazon Interactive Video Service",
+    "namespace": "ivs"
+  },
+  "Amazon-Kendra": {
+    "name": "Amazon Kendra",
+    "namespace": "kendra"
+  },
+  "Amazon-Keyspaces": {
+    "name": "Amazon Keyspaces",
+    "namespace": "keyspaces"
+  },
+  "Amazon-Kinesis": {
+    "name": "Amazon Kinesis",
+    "namespace": "kinesis"
+  },
+  "Amazon-Kinesis-Video-Streams": {
+    "name": "Amazon Kinesis Video Streams",
+    "namespace": "kinesisvideo"
+  },
+  "Amazon-Lex": {
+    "name": "Amazon Lex",
+    "namespace": "lexv2"
+  },
+  "Amazon-Lightsail": {
+    "name": "Amazon Lightsail",
+    "url": "https://lightsail.aws.amazon.com/ls/webapp/home"
+  },
+  "Amazon-Location-Service": {
+    "name": "Amazon Location Service",
+    "namespace": "location"
+  },
+  "Amazon-Lookout-for-Equipment": {
+    "name": "Amazon Lookout for Equipment",
+    "namespace": "lookoutequipment"
+  },
+  "Amazon-Lookout-for-Metrics": {
+    "name": "Amazon Lookout for Metrics",
+    "namespace": "lookoutmetrics"
+  },
+  "Amazon-Lookout-for-Vision": {
+    "name": "Amazon Lookout for Vision",
+    "namespace": "lookoutvision"
+  },
+  "Amazon-Macie": {
+    "name": "Amazon Macie",
+    "namespace": "macie"
+  },
+  "Amazon-Managed-Blockchain": {
+    "name": "Amazon Managed Blockchain",
+    "namespace": "managedblockchain"
+  },
+  "Amazon-Managed-Grafana": {
+    "name": "Amazon Managed Grafana",
+    "namespace": "grafana"
+  },
+  "Amazon-Managed-Service-for-Apache-Flink": {
+    "name": "Amazon Managed Service for Apache Flink",
+    "namespace": "managed-flink"
+  },
+  "Amazon-Managed-Streaming-for-Apache-Kafka": {
+    "name": "Amazon Managed Streaming for Apache Kafka",
+    "namespace": "msk"
+  },
+  "Amazon-Managed-Workflows-for-Apache-Airflow": {
+    "name": "Amazon Managed Workflows for Apache Airflow",
+    "namespace": "mwaa"
+  },
+  "Amazon-MemoryDB": {
+    "name": "Amazon MemoryDB",
+    "namespace": "memorydb"
+  },
+  "Amazon-Monitron": {
+    "name": "Amazon Monitron",
+    "namespace": "monitron"
+  },
+  "Amazon-MQ": {
+    "name": "Amazon MQ",
+    "namespace": "amazon-mq"
+  },
+  "Amazon-Neptune": {
+    "name": "Amazon Neptune",
+    "namespace": "neptune"
+  },
+  "Amazon-OpenSearch-Service": {
+    "name": "Amazon OpenSearch Service",
+    "namespace": "aos"
+  },
+  "Amazon-Personalize": {
+    "name": "Amazon Personalize",
+    "namespace": "personalize"
+  },
+  "Amazon-Pinpoint": {
+    "name": "Amazon Pinpoint",
+    "namespace": "pinpoint"
+  },
+  "Amazon-Polly": {
+    "name": "Amazon Polly",
+    "namespace": "polly"
+  },
+  "Amazon-Q": {
+    "name": "Amazon Q",
+    "url": "https://us-east-1.console.aws.amazon.com/amazonq/home"
+  },
+  "Amazon-Quantum-Ledger-Database": {
+    "name": "Amazon Quantum Ledger Database",
+    "namespace": "qldb"
+  },
+  "Amazon-QuickSight": {
+    "name": "Amazon QuickSight",
+    "url": "https://quicksight.aws.amazon.com/"
+  },
+  "Amazon-RDS": {
+    "name": "Amazon RDS",
+    "namespace": "rds"
+  },
+  "Amazon-Redshift": {
+    "name": "Amazon Redshift",
+    "namespace": "redshiftv2"
+  },
+  "Amazon-Rekognition": {
+    "name": "Amazon Rekognition",
+    "namespace": "rekognition"
+  },
+  "Amazon-Route-53": {
+    "name": "Amazon Route 53",
+    "namespace": "route53"
+  },
+  "Amazon-SageMaker": {
+    "name": "Amazon SageMaker",
+    "namespace": "sagemaker"
+  },
+  "Amazon-Security-Lake": {
+    "name": "Amazon Security Lake",
+    "namespace": "securitylake"
+  },
+  "Amazon-Simple-Email-Service": {
+    "name": "Amazon Simple Email Service",
+    "namespace": "ses"
+  },
+  "Amazon-Simple-Notification-Service": {
+    "name": "Amazon Simple Notification Service",
+    "namespace": "sns"
+  },
+  "Amazon-Simple-Queue-Service": {
+    "name": "Amazon Simple Queue Service",
+    "namespace": "sqs"
+  },
+  "Amazon-Simple-Storage-Service": {
+    "name": "Amazon Simple Storage Service",
+    "namespace": "s3"
+  },
+  "Amazon-Simple-Storage-Service-Glacier": {
+    "name": "Amazon S3 Glacier",
+    "namespace": "glacier"
+  },
+  "Amazon-Textract": {
+    "name": "Amazon Textract",
+    "namespace": "textract"
+  },
+  "Amazon-Timestream": {
+    "name": "Amazon Timestream",
+    "namespace": "timestream"
+  },
+  "Amazon-Transcribe": {
+    "name": "Amazon Transcribe",
+    "namespace": "transcribe"
+  },
+  "Amazon-Translate": {
+    "name": "Amazon Translate",
+    "namespace": "translate"
+  },
+  "Amazon-Verified-Permissions": {
+    "name": "Amazon Verified Permissions",
+    "namespace": "verifiedpermissions"
+  },
+  "Amazon-Virtual-Private-Cloud": {
+    "name": "Amazon Virtual Private Cloud",
+    "namespace": "vpc"
+  },
+  "Amazon-WorkDocs": {
+    "name": "Amazon WorkDocs",
+    "url": "https://workdocs.aws.amazon.com/"
+  },
+  "Amazon-WorkMail": {
+    "name": "Amazon WorkMail",
+    "url": "https://workmail.aws.amazon.com/"
+  },
+  "Amazon-WorkSpaces-Family": {
+    "name": "Amazon WorkSpaces",
+    "namespace": "workspaces"
+  },
+  "AWS-Amplify": {
+    "name": "AWS Amplify",
+    "namespace": "amplify"
+  },
+  "AWS-App-Mesh": {
+    "name": "AWS App Mesh",
+    "namespace": "appmesh"
+  },
+  "AWS-App-Runner": {
+    "name": "AWS App Runner",
+    "namespace": "apprunner"
+  },
+  "AWS-App-Studio": {
+    "name": "AWS App Studio",
+    "url": "https://app.studio.us-east-1.aws/"
+  },
+  "AWS-AppConfig": {
+    "name": "AWS AppConfig",
+    "namespace": "systems-manager/appconfig"
+  },
+  "AWS-AppFabric": {
+    "name": "AWS AppFabric",
+    "namespace": "appfabric"
+  },
+  "AWS-AppSync": {
+    "name": "AWS AppSync",
+    "namespace": "appsync"
+  },
+  "AWS-Artifact": {
+    "name": "AWS Artifact",
+    "namespace": "artifact"
+  },
+  "AWS-Audit-Manager": {
+    "name": "AWS Audit Manager",
+    "namespace": "auditmanager"
+  },
+  "AWS-B2B-Data-Interchange": {
+    "name": "AWS B2B Data Interchange",
+    "namespace": "b2bi"
+  },
+  "AWS-Backup": {
+    "name": "AWS Backup",
+    "namespace": "backup"
+  },
+  "AWS-Batch": {
+    "name": "AWS Batch",
+    "namespace": "batch"
+  },
+  "AWS-Billing-Conductor": {
+    "name": "AWS Billing Conductor",
+    "namespace": "billingconductor"
+  },
+  "AWS-Budgets": {
+    "name": "AWS Budgets",
+    "url": "https://console.aws.amazon.com/billing/home#/budgets"
+  },
+  "AWS-Certificate-Manager": {
+    "name": "AWS Certificate Manager",
+    "namespace": "acm"
+  },
+  "AWS-Chatbot": {
+    "name": "AWS Chatbot",
+    "namespace": "chatbot"
+  },
+  "AWS-Clean-Rooms": {
+    "name": "AWS Clean Rooms",
+    "namespace": "cleanrooms"
+  },
+  "AWS-Cloud-Map": {
+    "name": "AWS Cloud Map",
+    "namespace": "cloudmap"
+  },
+  "AWS-Cloud-WAN": {
+    "name": "AWS Cloud WAN",
+    "namespace": "networkmanager"
+  },
+  "AWS-Cloud9": {
+    "name": "AWS Cloud9",
+    "namespace": "cloud9"
+  },
+  "AWS-CloudFormation": {
+    "name": "AWS CloudFormation",
+    "namespace": "cloudformation"
+  },
+  "AWS-CloudHSM": {
+    "name": "AWS CloudHSM",
+    "namespace": "cloudhsm"
+  },
+  "AWS-CloudShell": {
+    "name": "AWS CloudShell",
+    "namespace": "cloudshell"
+  },
+  "AWS-CloudTrail": {
+    "name": "AWS CloudTrail",
+    "namespace": "cloudtrailv2"
+  },
+  "AWS-CodeArtifact": {
+    "name": "AWS CodeArtifact",
+    "namespace": "codesuite/codeartifact"
+  },
+  "AWS-CodeBuild": {
+    "name": "AWS CodeBuild",
+    "namespace": "codesuite/codebuild"
+  },
+  "AWS-CodeCommit": {
+    "name": "AWS CodeCommit",
+    "namespace": "codesuite/codecommit"
+  },
+  "AWS-CodeDeploy": {
+    "name": "AWS CodeDeploy",
+    "namespace": "codesuite/codedeploy"
+  },
+  "AWS-CodePipeline": {
+    "name": "AWS CodePipeline",
+    "namespace": "codesuite/codepipeline"
+  },
+  "AWS-Compute-Optimizer": {
+    "name": "AWS Compute Optimizer",
+    "namespace": "compute-optimizer"
+  },
+  "AWS-Config": {
+    "name": "AWS Config",
+    "namespace": "config"
+  },
+  "AWS-Control-Tower": {
+    "name": "AWS Control Tower",
+    "namespace": "controltower"
+  },
+  "AWS-Cost-and-Usage-Report": {
+    "name": "AWS Cost and Usage Report",
+    "namespace": "cur"
+  },
+  "AWS-Cost-Explorer": {
+    "name": "AWS Cost Explorer",
+    "namespace": "cost-management"
+  },
+  "AWS-Data-Exchange": {
+    "name": "AWS Data Exchange",
+    "namespace": "dataexchange"
+  },
+  "AWS-DataSync": {
+    "name": "AWS DataSync",
+    "namespace": "datasync"
+  },
+  "AWS-Deadline-Cloud": {
+    "name": "AWS Deadline Cloud",
+    "namespace": "deadline"
+  },
+  "AWS-DeepRacer": {
+    "name": "AWS DeepRacer",
+    "namespace": "deepracer"
+  },
+  "AWS-Device-Farm": {
+    "name": "AWS Device Farm",
+    "namespace": "devicefarm"
+  },
+  "AWS-Direct-Connect": {
+    "name": "AWS Direct Connect",
+    "namespace": "directconnect"
+  },
+  "AWS-Directory-Service": {
+    "name": "AWS Directory Service",
+    "namespace": "directoryservicev2"
+  },
+  "AWS-Elastic-Beanstalk": {
+    "name": "AWS Elastic Beanstalk",
+    "namespace": "elasticbeanstalk"
+  },
+  "AWS-Elastic-Disaster-Recovery": {
+    "name": "AWS Elastic Disaster Recovery",
+    "namespace": "drs"
+  },
+  "AWS-Elemental-MediaConnect": {
+    "name": "AWS Elemental MediaConnect",
+    "namespace": "mediaconnect"
+  },
+  "AWS-Elemental-MediaConvert": {
+    "name": "AWS Elemental MediaConvert",
+    "namespace": "mediaconvert"
+  },
+  "AWS-Elemental-MediaLive": {
+    "name": "AWS Elemental MediaLive",
+    "namespace": "medialive"
+  },
+  "AWS-Elemental-MediaPackage": {
+    "name": "AWS Elemental MediaPackage",
+    "namespace": "mediapackage"
+  },
+  "AWS-Elemental-MediaStore": {
+    "name": "AWS Elemental MediaStore",
+    "namespace": "mediastore"
+  },
+  "AWS-Elemental-MediaTailor": {
+    "name": "AWS Elemental MediaTailor",
+    "namespace": "mediatailor"
+  },
+  "AWS-End-User-Messaging": {
+    "name": "AWS End User Messaging",
+    "namespace": "end-user-messaging"
+  },
+  "AWS-Entity-Resolution": {
+    "name": "AWS Entity Resolution",
+    "namespace": "entityresolution"
+  },
+  "AWS-Fault-Injection-Service": {
+    "name": "AWS Fault Injection Service",
+    "namespace": "fis"
+  },
+  "AWS-Firewall-Manager": {
+    "name": "AWS Firewall Manager",
+    "namespace": "wafv2/fms"
+  },
+  "AWS-Global-Accelerator": {
+    "name": "AWS Global Accelerator",
+    "namespace": "globalaccelerator"
+  },
+  "AWS-Glue": {
+    "name": "AWS Glue",
+    "namespace": "glue"
+  },
+  "AWS-Glue-DataBrew": {
+    "name": "AWS Glue DataBrew",
+    "namespace": "databrew"
+  },
+  "AWS-Ground-Station": {
+    "name": "AWS Ground Station",
+    "namespace": "groundstation"
+  },
+  "AWS-Health-Dashboard": {
+    "name": "AWS Health Dashboard",
+    "namespace": "health"
+  },
+  "AWS-HealthImaging": {
+    "name": "AWS HealthImaging",
+    "namespace": "medical-imaging"
+  },
+  "AWS-HealthLake": {
+    "name": "AWS HealthLake",
+    "namespace": "healthlake"
+  },
+  "AWS-HealthOmics": {
+    "name": "AWS HealthOmics",
+    "namespace": "omics"
+  },
+  "AWS-IAM-Identity-Center": {
+    "name": "AWS IAM Identity Center",
+    "namespace": "singlesignon"
+  },
+  "AWS-Identity-and-Access-Management": {
+    "name": "AWS Identity and Access Management",
+    "namespace": "iam"
+  },
+  "AWS-Infrastructure-Composer": {
+    "name": "AWS Infrastructure Composer",
+    "namespace": "composer"
+  },
+  "AWS-IoT-Analytics": {
+    "name": "AWS IoT Analytics",
+    "namespace": "iotanalytics"
+  },
+  "AWS-IoT-Core": {
+    "name": "AWS IoT Core",
+    "namespace": "iot"
+  },
+  "AWS-IoT-Device-Defender": {
+    "name": "AWS IoT Device Defender",
+    "url": "https://console.aws.amazon.com/iot/home#/dd/defaults"
+  },
+  "AWS-IoT-Events": {
+    "name": "AWS IoT Events",
+    "namespace": "iotevents"
+  },
+  "AWS-IoT-FleetWise": {
+    "name": "AWS IoT FleetWise",
+    "namespace": "iotfleetwise"
+  },
+  "AWS-IoT-Greengrass": {
+    "name": "AWS IoT Greengrass",
+    "namespace": "greengrass"
+  },
+  "AWS-IoT-SiteWise": {
+    "name": "AWS IoT SiteWise",
+    "namespace": "iotsitewise"
+  },
+  "AWS-IoT-TwinMaker": {
+    "name": "AWS IoT TwinMaker",
+    "namespace": "iottwinmaker"
+  },
+  "AWS-Key-Management-Service": {
+    "name": "AWS Key Management Service",
+    "namespace": "kms"
+  },
+  "AWS-Lake-Formation": {
+    "name": "AWS Lake Formation",
+    "namespace": "lakeformation"
+  },
+  "AWS-Lambda": {
+    "name": "AWS Lambda",
+    "namespace": "lambda"
+  },
+  "AWS-Launch-Wizard": {
+    "name": "AWS Launch Wizard",
+    "namespace": "launchwizard"
+  },
+  "AWS-License-Manager": {
+    "name": "AWS License Manager",
+    "namespace": "license-manager"
+  },
+  "AWS-Mainframe-Modernization": {
+    "name": "AWS Mainframe Modernization",
+    "namespace": "m2"
+  },
+  "AWS-Migration-Evaluator": {
+    "name": "AWS Migration Evaluator",
+    "namespace": "migration-evaluator"
+  },
+  "AWS-Migration-Hub": {
+    "name": "AWS Migration Hub",
+    "namespace": "migrationhub"
+  },
+  "AWS-Network-Firewall": {
+    "name": "AWS Network Firewall",
+    "url": "https://console.aws.amazon.com/vpc/home#NetworkFirewall:"
+  },
+  "AWS-Organizations": {
+    "name": "AWS Organizations",
+    "namespace": "organizations"
+  },
+  "AWS-Outposts-family": {
+    "name": "AWS Outposts",
+    "namespace": "outposts"
+  },
+  "AWS-Panorama": {
+    "name": "AWS Panorama",
+    "namespace": "panorama"
+  },
+  "AWS-Parallel-Computing-Service": {
+    "name": "AWS Parallel Computing Service",
+    "namespace": "pcs"
+  },
+  "AWS-Payment-Cryptography": {
+    "name": "AWS Payment Cryptography",
+    "namespace": "payment-cryptography"
+  },
+  "AWS-Private-5G": {
+    "name": "AWS Private 5G",
+    "namespace": "private-networks"
+  },
+  "AWS-Private-Certificate-Authority": {
+    "name": "AWS Private Certificate Authority",
+    "namespace": "acm-pca"
+  },
+  "AWS-Proton": {
+    "name": "AWS Proton",
+    "namespace": "proton"
+  },
+  "AWS-Resilience-Hub": {
+    "name": "AWS Resilience Hub",
+    "namespace": "resiliencehub"
+  },
+  "AWS-Resource-Access-Manager": {
+    "name": "AWS Resource Access Manager",
+    "namespace": "ram"
+  },
+  "AWS-Resource-Explorer": {
+    "name": "AWS Resource Explorer",
+    "namespace": "resource-explorer"
+  },
+  "AWS-Secrets-Manager": {
+    "name": "AWS Secrets Manager",
+    "namespace": "secretsmanager"
+  },
+  "AWS-Security-Hub": {
+    "name": "AWS Security Hub",
+    "namespace": "securityhub"
+  },
+  "AWS-Security-Incident-Response": {
+    "name": "AWS Security Incident Response",
+    "namespace": "security-incident-response"
+  },
+  "AWS-Serverless-Application-Repository": {
+    "name": "AWS Serverless Application Repository",
+    "namespace": "serverlessrepo"
+  },
+  "AWS-Service-Catalog": {
+    "name": "AWS Service Catalog",
+    "namespace": "servicecatalog"
+  },
+  "AWS-Shield": {
+    "name": "AWS Shield",
+    "namespace": "shield"
+  },
+  "AWS-Signer": {
+    "name": "AWS Signer",
+    "namespace": "signer"
+  },
+  "AWS-SimSpace-Weaver": {
+    "name": "AWS SimSpace Weaver",
+    "namespace": "simspaceweaver"
+  },
+  "AWS-Snowball": {
+    "name": "AWS Snowball",
+    "namespace": "importexport"
+  },
+  "AWS-Step-Functions": {
+    "name": "AWS Step Functions",
+    "namespace": "states"
+  },
+  "AWS-Storage-Gateway": {
+    "name": "AWS Storage Gateway",
+    "namespace": "storagegateway"
+  },
+  "AWS-Supply-Chain": {
+    "name": "AWS Supply Chain",
+    "namespace": "scn"
+  },
+  "AWS-Systems-Manager": {
+    "name": "AWS Systems Manager",
+    "namespace": "systems-manager"
+  },
+  "AWS-Telco-Network-Builder": {
+    "name": "AWS Telco Network Builder",
+    "namespace": "tnb"
+  },
+  "AWS-Transfer-Family": {
+    "name": "AWS Transfer Family",
+    "namespace": "transfer"
+  },
+  "AWS-Trusted-Advisor": {
+    "name": "AWS Trusted Advisor",
+    "namespace": "trustedadvisor"
+  },
+  "AWS-User-Notifications": {
+    "name": "AWS User Notifications",
+    "namespace": "notifications"
+  },
+  "AWS-Verified-Access": {
+    "name": "AWS Verified Access",
+    "namespace": "verified-access"
+  },
+  "AWS-WAF": {
+    "name": "AWS WAF",
+    "namespace": "wafv2"
+  },
+  "AWS-Well-Architected-Tool": {
+    "name": "AWS Well-Architected Tool",
+    "namespace": "wellarchitected"
+  },
+  "AWS-Wickr": {
+    "name": "AWS Wickr",
+    "namespace": "wickr"
+  },
+  "AWS-X-Ray": {
+    "name": "AWS X-Ray",
+    "namespace": "xray"
+  },
+  "AWS-Application-Discovery-Service": {
+    "name": "AWS Application Discovery Service",
+    "namespace": "discovery"
+  },
+  "AWS-Application-Migration-Service": {
+    "name": "AWS Application Migration Service",
+    "namespace": "mgn"
+  },
+  "Red-Hat-OpenShift-Service-on-AWS": {
+    "name": "Red Hat OpenShift Service on AWS",
+    "namespace": "rosa"
+  }
+}
