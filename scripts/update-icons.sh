@@ -48,6 +48,10 @@ find "$TMP_DIR/extracted" -path "*/Architecture-Service-Icons*/64/*_64.png" -not
     continue
   fi
 
+  # Strip Amazon- and AWS- prefixes for cleaner Dock names
+  clean_name="${clean_name#Amazon-}"
+  clean_name="${clean_name#AWS-}"
+
   cp "$src" "$ICONS_DIR/$clean_name"
   count=$((count + 1))
 done

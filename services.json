@@ -39,10 +39,6 @@
     "name": "Amazon Chime",
     "namespace": "chime"
   },
-  "Cloud-Directory": {
-    "name": "Amazon Cloud Directory",
-    "namespace": "clouddirectory"
-  },
   "CloudFront": {
     "name": "Amazon CloudFront",
     "namespace": "cloudfront"
@@ -139,14 +135,6 @@
     "name": "Amazon EventBridge",
     "namespace": "events"
   },
-  "FinSpace": {
-    "name": "Amazon FinSpace",
-    "namespace": "finspace"
-  },
-  "Forecast": {
-    "name": "Amazon Forecast",
-    "namespace": "forecast"
-  },
   "Fraud-Detector": {
     "name": "Amazon Fraud Detector",
     "namespace": "frauddetector"
@@ -194,18 +182,6 @@
   "Location-Service": {
     "name": "Amazon Location Service",
     "namespace": "location"
-  },
-  "Lookout-for-Equipment": {
-    "name": "Amazon Lookout for Equipment",
-    "namespace": "lookoutequipment"
-  },
-  "Lookout-for-Metrics": {
-    "name": "Amazon Lookout for Metrics",
-    "namespace": "lookoutmetrics"
-  },
-  "Lookout-for-Vision": {
-    "name": "Amazon Lookout for Vision",
-    "namespace": "lookoutvision"
   },
   "Macie": {
     "name": "Amazon Macie",
@@ -266,10 +242,6 @@
   "Q": {
     "name": "Amazon Q",
     "url": "https://us-east-1.console.aws.amazon.com/amazonq/home"
-  },
-  "Quantum-Ledger-Database": {
-    "name": "Amazon Quantum Ledger Database",
-    "namespace": "qldb"
   },
   "QuickSight": {
     "name": "Amazon QuickSight",
@@ -343,10 +315,6 @@
     "name": "Amazon Virtual Private Cloud",
     "namespace": "vpc"
   },
-  "WorkDocs": {
-    "name": "Amazon WorkDocs",
-    "url": "https://workdocs.aws.amazon.com/"
-  },
   "WorkMail": {
     "name": "Amazon WorkMail",
     "url": "https://workmail.aws.amazon.com/"
@@ -358,10 +326,6 @@
   "Amplify": {
     "name": "AWS Amplify",
     "namespace": "amplify"
-  },
-  "App-Mesh": {
-    "name": "AWS App Mesh",
-    "namespace": "appmesh"
   },
   "App-Runner": {
     "name": "AWS App Runner",
@@ -431,10 +395,6 @@
     "name": "AWS Cloud WAN",
     "namespace": "networkmanager"
   },
-  "Cloud9": {
-    "name": "AWS Cloud9",
-    "namespace": "cloud9"
-  },
   "CloudFormation": {
     "name": "AWS CloudFormation",
     "namespace": "cloudformation"
@@ -503,10 +463,6 @@
     "name": "AWS Deadline Cloud",
     "namespace": "deadline"
   },
-  "DeepRacer": {
-    "name": "AWS DeepRacer",
-    "namespace": "deepracer"
-  },
   "Device-Farm": {
     "name": "AWS Device Farm",
     "namespace": "devicefarm"
@@ -574,10 +530,6 @@
   "Glue": {
     "name": "AWS Glue",
     "namespace": "glue"
-  },
-  "Glue-DataBrew": {
-    "name": "AWS Glue DataBrew",
-    "namespace": "databrew"
   },
   "Ground-Station": {
     "name": "AWS Ground Station",
@@ -687,10 +639,6 @@
     "name": "AWS Outposts",
     "namespace": "outposts"
   },
-  "Panorama": {
-    "name": "AWS Panorama",
-    "namespace": "panorama"
-  },
   "Parallel-Computing-Service": {
     "name": "AWS Parallel Computing Service",
     "namespace": "pcs"
@@ -706,10 +654,6 @@
   "Private-Certificate-Authority": {
     "name": "AWS Private Certificate Authority",
     "namespace": "acm-pca"
-  },
-  "Proton": {
-    "name": "AWS Proton",
-    "namespace": "proton"
   },
   "Resilience-Hub": {
     "name": "AWS Resilience Hub",
@@ -750,10 +694,6 @@
   "Signer": {
     "name": "AWS Signer",
     "namespace": "signer"
-  },
-  "SimSpace-Weaver": {
-    "name": "AWS SimSpace Weaver",
-    "namespace": "simspaceweaver"
   },
   "Snowball": {
     "name": "AWS Snowball",
