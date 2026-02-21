@@ -29,6 +29,9 @@ node compile.js
 
 # Preview without creating files
 node compile.js --dry-run
+
+# Custom output directory
+node compile.js --dest ~/Desktop/my-aws-shortcuts
 ```
 
 ## Customization

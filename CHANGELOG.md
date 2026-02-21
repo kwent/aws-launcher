@@ -7,6 +7,9 @@
   * Expand from 71 to 206 AWS services.
   * Add `services.json` manifest (replaces inline namespace mappings).
   * Add `--dry-run` flag to preview without creating files.
+  * Add `--dest` flag to customize output directory.
+  * Concurrent shortcut creation using worker pool.
+  * Remove `Amazon-`/`AWS-` prefixes from shortcut names.
   * Update `fileicon` dependency to ^0.3.3 (fixes macOS 12.3+).
   * Add ESLint (flat config, v10) and Vitest.
   * Add GitHub Actions CI and release workflows.

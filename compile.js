@@ -4,17 +4,24 @@ import { execFile } from "node:child_process";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
+import { parseArgs } from "node:util";
 
 const execFileAsync = promisify(execFile);
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const DEST_DIR = resolve(homedir(), "aws-launcher");
+const { values: args } = parseArgs({
+  options: {
+    "dry-run": { type: "boolean", default: false },
+    "dest": { type: "string", default: resolve(homedir(), "aws-launcher") },
+  },
+  strict: false,
+});
+
+const DEST_DIR = resolve(args.dest);
 const SERVICES_PATH = resolve(__dirname, "services.json");
 const ICONS_DIR = resolve(__dirname, "icons");
 const FILEICON = resolve(__dirname, "node_modules", ".bin", "fileicon");
 const CONCURRENCY = availableParallelism();
-
-const dryRun = process.argv.includes("--dry-run");
 
 async function createShortcut(destDir, key, service, iconPath) {
   const url =
@@ -49,7 +56,7 @@ async function main() {
   const services = JSON.parse(readFileSync(SERVICES_PATH, "utf8"));
   const entries = Object.entries(services);
 
-  if (dryRun) {
+  if (args["dry-run"]) {
     console.log(`Dry run: would create ${entries.length} shortcuts in ${DEST_DIR}`);
     for (const [key, service] of entries) {
       const url =
