@@ -16,8 +16,8 @@ describe("compile.js", () => {
       });
 
       expect(output).toContain("Dry run:");
-      expect(output).toContain("Amazon-EC2");
-      expect(output).toContain("AWS-Lambda");
+      expect(output).toContain("EC2");
+      expect(output).toContain("Lambda");
       expect(output).toContain("https://console.aws.amazon.com/ec2/home");
     });
 
@@ -27,7 +27,7 @@ describe("compile.js", () => {
         encoding: "utf8",
       });
 
-      expect(output).toContain("Amazon-Lightsail");
+      expect(output).toContain("Lightsail");
       expect(output).toContain("https://lightsail.aws.amazon.com/");
     });
   });
@@ -38,7 +38,7 @@ describe("compile.js", () => {
         readFileSync(resolve(ROOT, "services.json"), "utf8"),
       );
 
-      const ec2 = services["Amazon-EC2"];
+      const ec2 = services["EC2"];
       expect(ec2.namespace).toBe("ec2");
 
       const expectedUrl = `https://console.aws.amazon.com/${ec2.namespace}/home`;
@@ -50,7 +50,7 @@ describe("compile.js", () => {
         readFileSync(resolve(ROOT, "services.json"), "utf8"),
       );
 
-      const lightsail = services["Amazon-Lightsail"];
+      const lightsail = services["Lightsail"];
       expect(lightsail.url).toBeTruthy();
       expect(lightsail.namespace).toBeUndefined();
     });

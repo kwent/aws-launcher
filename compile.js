@@ -1,4 +1,4 @@
-import { homedir } from "node:os";
+import { homedir, availableParallelism } from "node:os";
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { execFile } from "node:child_process";
 import { resolve, dirname } from "node:path";
@@ -11,6 +11,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const DEST_DIR = resolve(homedir(), "aws-launcher");
 const SERVICES_PATH = resolve(__dirname, "services.json");
 const ICONS_DIR = resolve(__dirname, "icons");
+const FILEICON = resolve(__dirname, "node_modules", ".bin", "fileicon");
+const CONCURRENCY = availableParallelism();
 
 const dryRun = process.argv.includes("--dry-run");
 
@@ -22,10 +24,25 @@ async function createShortcut(destDir, key, service, iconPath) {
 
   writeFileSync(filePath, `[InternetShortcut]\nURL=${url}`);
 
-  await execFileAsync("fileicon", ["set", filePath, iconPath]);
+  await execFileAsync(FILEICON, ["set", filePath, iconPath]);
   await execFileAsync("SetFile", ["-a", "E", filePath]);
 
   return { key, url };
+}
+
+async function runConcurrent(tasks, concurrency) {
+  const results = [];
+  let i = 0;
+
+  async function worker() {
+    while (i < tasks.length) {
+      const index = i++;
+      results[index] = await tasks[index]();
+    }
+  }
+
+  await Promise.all(Array.from({ length: concurrency }, () => worker()));
+  return results;
 }
 
 async function main() {
@@ -50,12 +67,12 @@ async function main() {
   let created = 0;
   let errors = 0;
 
-  for (const [key, service] of entries) {
+  const tasks = entries.map(([key, service]) => async () => {
     const iconPath = resolve(ICONS_DIR, `${key}.png`);
     if (!existsSync(iconPath)) {
       console.error(`Skipping ${key}: icon not found at ${iconPath}`);
       errors++;
-      continue;
+      return;
     }
 
     try {
@@ -66,7 +83,9 @@ async function main() {
       console.error(`Failed ${key}: ${err.message}`);
       errors++;
     }
-  }
+  });
+
+  await runConcurrent(tasks, CONCURRENCY);
 
   console.log(`\nDone: ${created} shortcuts created, ${errors} errors`);
 
