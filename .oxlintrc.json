@@ -1,6 +1,8 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [],
+  "plugins": [
+    "vitest"
+  ],
   "categories": {
     "correctness": "off"
   },
@@ -21,6 +23,7 @@
   ],
   "rules": {
     "constructor-super": "error",
+    "eqeqeq": "error",
     "for-direction": "error",
     "getter-return": "error",
     "no-async-promise-executor": "error",
@@ -38,6 +41,7 @@
     "no-dupe-else-if": "error",
     "no-dupe-keys": "error",
     "no-duplicate-case": "error",
+    "no-duplicate-imports": "error",
     "no-empty": "error",
     "no-empty-character-class": "error",
     "no-empty-pattern": "error",
@@ -87,5 +91,15 @@
     "require-yield": "error",
     "use-isnan": "error",
     "valid-typeof": "error"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["test/**/*.test.js"],
+      "rules": {
+        "vitest/no-focused-tests": "error",
+        "vitest/no-identical-title": "error",
+        "vitest/valid-expect": "error"
+      }
+    }
+  ]
 }

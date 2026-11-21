@@ -5,6 +5,7 @@ coverage/
 .github/
 .claude/
 vitest.config.js
+.oxfmtrc.json
 .oxlintrc.json
 mise.toml
 CLAUDE.md
