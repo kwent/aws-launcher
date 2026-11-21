@@ -34,9 +34,7 @@ describe("compile.js", () => {
 
   describe("URL generation", () => {
     it("generates standard console URLs from namespace", () => {
-      const services = JSON.parse(
-        readFileSync(resolve(ROOT, "services.json"), "utf8"),
-      );
+      const services = JSON.parse(readFileSync(resolve(ROOT, "services.json"), "utf8"));
 
       const ec2 = services["EC2"];
       expect(ec2.namespace).toBe("ec2");
@@ -46,9 +44,7 @@ describe("compile.js", () => {
     });
 
     it("uses full URL override when provided", () => {
-      const services = JSON.parse(
-        readFileSync(resolve(ROOT, "services.json"), "utf8"),
-      );
+      const services = JSON.parse(readFileSync(resolve(ROOT, "services.json"), "utf8"));
 
       const lightsail = services["Lightsail"];
       expect(lightsail.url).toBeTruthy();

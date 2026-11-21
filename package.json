@@ -22,7 +22,9 @@
     "build": "node compile.js",
     "postinstall": "node compile.js",
     "test": "vitest run",
-    "lint": "oxlint ."
+    "lint": "oxlint .",
+    "format": "oxfmt compile.js test/ vitest.config.js",
+    "format:check": "oxfmt --check compile.js test/ vitest.config.js"
   },
   "keywords": [
     "aws",
@@ -37,6 +39,7 @@
     "fileicon": "^0.3.3"
   },
   "devDependencies": {
+    "oxfmt": "^0.79.0",
     "oxlint": "^1.94.0",
     "vitest": "^5.0.0"
   }

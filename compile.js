@@ -3,8 +3,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { execFile } from "node:child_process";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { promisify } from "node:util";
-import { parseArgs } from "node:util";
+import { parseArgs, promisify } from "node:util";
 
 const execFileAsync = promisify(execFile);
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -12,7 +11,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const { values: args } = parseArgs({
   options: {
     "dry-run": { type: "boolean", default: false },
-    "dest": { type: "string", default: resolve(homedir(), "aws-launcher") },
+    dest: { type: "string", default: resolve(homedir(), "aws-launcher") },
   },
   strict: false,
 });
@@ -24,9 +23,7 @@ const FILEICON = resolve(__dirname, "node_modules", ".bin", "fileicon");
 const CONCURRENCY = availableParallelism();
 
 async function createShortcut(destDir, key, service, iconPath) {
-  const url =
-    service.url ||
-    `https://console.aws.amazon.com/${service.namespace}/home`;
+  const url = service.url || `https://console.aws.amazon.com/${service.namespace}/home`;
   const filePath = resolve(destDir, `${key}.url`);
 
   writeFileSync(filePath, `[InternetShortcut]\nURL=${url}`);
@@ -59,9 +56,7 @@ async function main() {
   if (args["dry-run"]) {
     console.log(`Dry run: would create ${entries.length} shortcuts in ${DEST_DIR}`);
     for (const [key, service] of entries) {
-      const url =
-        service.url ||
-        `https://console.aws.amazon.com/${service.namespace}/home`;
+      const url = service.url || `https://console.aws.amazon.com/${service.namespace}/home`;
       console.log(`  ${key} → ${url}`);
     }
     return;

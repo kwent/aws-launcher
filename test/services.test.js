@@ -5,9 +5,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
-const services = JSON.parse(
-  readFileSync(resolve(ROOT, "services.json"), "utf8"),
-);
+const services = JSON.parse(readFileSync(resolve(ROOT, "services.json"), "utf8"));
 
 describe("services.json", () => {
   it("is valid JSON with entries", () => {
@@ -55,10 +53,9 @@ describe("services.json", () => {
   it("urls are valid HTTP(S) URLs", () => {
     for (const [key, service] of Object.entries(services)) {
       if (service.url) {
-        expect(
-          service.url.startsWith("https://"),
-          `${key} url must start with https://`,
-        ).toBe(true);
+        expect(service.url.startsWith("https://"), `${key} url must start with https://`).toBe(
+          true,
+        );
       }
     }
   });
@@ -77,9 +74,7 @@ describe("services.json", () => {
     const allowedDuplicates = ["rds"]; // Aurora and RDS share the same console
     for (const [namespace, keys] of Object.entries(namespaceCounts)) {
       if (keys.length > 1 && !allowedDuplicates.includes(namespace)) {
-        expect.fail(
-          `Duplicate namespace "${namespace}" used by: ${keys.join(", ")}`,
-        );
+        expect.fail(`Duplicate namespace "${namespace}" used by: ${keys.join(", ")}`);
       }
     }
   });
