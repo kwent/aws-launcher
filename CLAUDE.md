@@ -13,7 +13,7 @@ npm install              # installs deps + runs postinstall (builds shortcuts)
 node compile.js          # manual rebuild
 node compile.js --dry-run # preview without creating files
 npm test                 # run vitest
-npm run lint             # run eslint
+npm run lint             # run Oxlint
 ```
 
 ## Architecture
