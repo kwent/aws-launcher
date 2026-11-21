@@ -22,7 +22,7 @@
     "build": "node compile.js",
     "postinstall": "node compile.js",
     "test": "vitest run",
-    "lint": "eslint ."
+    "lint": "oxlint ."
   },
   "keywords": [
     "aws",
@@ -37,8 +37,7 @@
     "fileicon": "^0.3.3"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "eslint": "^10.0.1",
+    "oxlint": "^1.94.0",
     "vitest": "^5.0.0"
   }
 }

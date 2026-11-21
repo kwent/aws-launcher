@@ -5,7 +5,7 @@ coverage/
 .github/
 .claude/
 vitest.config.js
-eslint.config.js
+.oxlintrc.json
 mise.toml
 CLAUDE.md
 PLAN.md
